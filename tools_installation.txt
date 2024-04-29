@@ -1,0 +1,24 @@
+Install kubectl:
+
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list > /dev/null
+sudo apt update
+sudo apt install -y kubectl
+***************************************************************************************************************************************
+
+Install Minikube:
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+sudo dpkg -i minikube_latest_amd64.deb
+
+to start thec service : minikube start
+to check the status : systemctl status <service-name>, in this case systemctl status minikube
+*******************************************************************************************
+
+install Ansible:
+
+sudo apt update
+sudo apt install -y ansible
+*******************************************************************************************
