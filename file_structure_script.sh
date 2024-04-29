@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p secure_kubernetes_infrastructure/ansible/inventories/kubernetes_cluster/group_vars
+mkdir -p secure_kubernetes_infrastructure/ansible/playbooks
+mkdir -p secure_kubernetes_infrastructure/ansible/roles/{configure_networks,configure_security_groups,configure_firewall_rules,common}/{tasks,defaults}
+mkdir -p secure_kubernetes_infrastructure/docs
+
+touch secure_kubernetes_infrastructure/ansible/inventories/kubernetes_cluster/hosts
+touch secure_kubernetes_infrastructure/ansible/inventories/kubernetes_cluster/group_vars/all.yml
+touch secure_kubernetes_infrastructure/ansible/playbooks/{configure_networks,configure_security_groups,configure_firewall_rules}.yml
+touch secure_kubernetes_infrastructure/ansible/playbooks/main.yml
+touch secure_kubernetes_infrastructure/ansible/roles/{configure_networks,configure_security_groups,configure_firewall_rules,common}/tasks/main.yml
+touch secure_kubernetes_infrastructure/ansible/roles/{configure_networks,configure_security_groups,configure_firewall_rules,common}/defaults/main.yml
+touch secure_kubernetes_infrastructure/docs/{installation_guide.md,usage_guide.md,network_config_guide.md,security_analysis_report.md,README.md}
+
+echo "Project structure created successfully!"
